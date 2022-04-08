@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bier</title>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                {% for content in header %}
+                    <th>{{ content }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+    <tbody>
+    {% for row in beers %}
+    <tr>
+
+        <td>{{ row["name"] }}</td>
+        <td>{{ row["herkunft"] }}</td>
+        <td>{{ row["vol"] }}</td>
+        <td>{{ row["brauerei"] }}</td>
+        <td>{{ row["preis"] }}</td>
+        <td>{{ row["steuern"] }}</td>
+
+    </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>
+
+</body>
+</html>
