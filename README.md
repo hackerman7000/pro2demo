@@ -1,1 +1,8 @@
-Hallo i bis blabla
+# Projektidee
+
+# Funktionalitäten
+
+# Probleme
+
+# Walkthrough
+

@@ -1,15 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='my_style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <title>Willkommen</title>
 </head>
-<body>
-<h1>Hello {{ name }}!</h1>
-<a>wie gehts?</a>
 
-<a href="{{link}}">Test</a>
+
+<body>
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">DBM-Studiumsrechner</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="ects.html" class="nav-link">ECTS</a></li>
+        <li class="nav-item"><a href="noten.html" class="nav-link">Noten</a></li>
+        <li class="nav-item"><a href="auswertung.html" class="nav-link">Auswertung</a></li>
+      </ul>
+    </header>
+</div>
+<br>
+<h1 class="lead mb-4 text-center">Wähle deine besuchten Module aus. <br><br></h1>
+
+<div class="d-flex gap-5 justify-content-center">
+  <div class="list-group mx-0">
+    <h4>Pflichtmodule</h4>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Englisch B2 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Soft Skills 1 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Wissenschaftliches Arbeiten </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Mathematik </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Betriebswirtschaft </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Design Thinking </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> E-Business Management </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Recht </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Statistik </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Programmierung 1 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Programmierung 2 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Architektur von Informationssystemen </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Kommunikation & Marketing </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Konzeption & Prototyping </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Strategien und Geschäftsmodelle im Digitalen Umfeld </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Soft Skills 2  </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Requirements Engineering </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Digital Marketing </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Projektmanagement 1 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Projektmanagement 2 </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Datenbankmanagementsysteme </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Human Computer Interaction </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Markt- und Sozialforschung </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> E-Commerce </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Business Process Engineering </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Unternehmensprojekt </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Bachelor Thesis </span>
+    </label>
+  </div>
+
+    <div class="list-group mx-0">
+    <h4>Wahlpflichtmodule</h4>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Content Marketing & Story Telling <small class="d-block text-muted">User Experience</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Design Introduction <small class="d-block text-muted">User Experience</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Experience Reality <small class="d-block text-muted">User Experience</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Markenführung & ICH-Marke <small class="d-block text-muted">User Experience</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> User Research and Workshop Moderation <small class="d-block text-muted">User Experience</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Big Data Vertiefung <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Business Intelligence und Big Data <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> IT-Sicherheit und Standards im Digital Business <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Konzeption und Umsetzung einer Webapplikation <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Makerspace: IoT Use Case <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Webprogrammierung <small class="d-block text-muted">Information Technology</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Aktuelle Trends und Themen <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Datenschutzrecht in der Schweiz und Europa <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Digital Disruption Potential <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Information and Data Management <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Information Consulting <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Sales im Digital Business <small class="d-block text-muted">Digital Innovation</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Business-Englisch C1 <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Entrepreneurial Accounting <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> Scientific Writing <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> VWL-Mikroökonomie <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> HCE – Human Centric Entrepreneurship 1 <small class="d-block text-muted">Praxis und Transfer</small> </span>
+    </label>
+    <label class="list-group-item d-flex gap-2">
+      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <span> HCE – Human Centric Entrepreneurship 2 <small class="d-block text-muted">Praxis und Transfer</small> </span>
+    </label>
+
+
+
+
+    </div>
+</div>
+<br><br>
+<div class="container">
+        <div class="col-md-12 text-center">
+            <button type="button" class="btn btn-primary">Weiter</button>
+        </div>
+<br><br>
 
 </body>
 </html>
