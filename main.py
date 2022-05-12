@@ -8,7 +8,34 @@ app = Flask("__name__")
 #
 faecher = {
     "englischb2": {"ects": 4, "gruppe": "pflicht"},
-     "softskills1": {"ects": 4, "gruppe": "pflicht"}
+    "softskills1": {"ects": 4, "gruppe": "pflicht"},
+    "wiar": {"ects": 4, "gruppe": "pflicht"},
+    "math": {"ects": 4, "gruppe": "pflicht"},
+    "bwl": {"ects": 4, "gruppe": "pflicht"},
+    "designthinking": {"ects": 4, "gruppe": "pflicht"},
+    "ebus": {"ects": 4, "gruppe": "pflicht"},
+    "recht": {"ects": 4, "gruppe": "pflicht"},
+    "statistik": {"ects": 4, "gruppe": "pflicht"},
+    "prog1": {"ects": 4, "gruppe": "pflicht"},
+    "prog2": {"ects": 4, "gruppe": "pflicht"},
+    "aris": {"ects": 4, "gruppe": "pflicht"},
+    "markom": {"ects": 4, "gruppe": "pflicht"},
+    "prototyping": {"ects": 4, "gruppe": "pflicht"},
+    "sgdu": {"ects": 4, "gruppe": "pflicht"},
+    "softskills2": {"ects": 4, "gruppe": "pflicht"},
+    "reque": {"ects": 4, "gruppe": "pflicht"},
+    "dima": {"ects": 4, "gruppe": "pflicht"},
+    "pro1": {"ects": 4, "gruppe": "pflicht"},
+    "pro2": {"ects": 4, "gruppe": "pflicht"},
+    "hci": {"ects": 4, "gruppe": "pflicht"},
+    "masofo": {"ects": 4, "gruppe": "pflicht"},
+    "ecommerce": {"ects": 4, "gruppe": "pflicht"},
+    "bpe": {"ects": 4, "gruppe": "pflicht"},
+    "unternehmensprojekt": {"ects": 4, "gruppe": "pflicht"},
+    "thesis": {"ects": 4, "gruppe": "pflicht"},
+
+
+
            }
 
 @app.route('/')
