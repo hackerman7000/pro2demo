@@ -25,119 +25,131 @@
 <br>
 <h1 class="lead mb-4 text-center">Wähle deine besuchten Module aus. <br><br></h1>
 
+
+<!-- >Formular wird geöffnet, durch action wird beim submit auf die ECTS-Seite verlinkt -->
+<form method="POST" action="{{ url_for('hello_ects') }}">
+
+<!--  Container mit allen Modulen wird geöffnet -->
 <div class="d-flex gap-5 justify-content-center">
+
+  <!-- linke Spalte mit den Pflichmodulen wird geöffnet -->
   <div class="list-group mx-0">
     <h4>Pflichtmodule</h4>
+
+    <!-- im label element wird jeweils eine Checkbox platziert
+    # Pro Modul wird ein label erstellt
+    # mit dem "name" wird später das ausgewählte modul in python angesprochen -->
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="englischb2" class="form-check-input flex-shrink-0" type="checkbox"  >
       <span> Englisch B2 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="softskills1" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Soft Skills 1 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="wiar" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Wissenschaftliches Arbeiten </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="math" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Mathematik </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="bwl" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Betriebswirtschaft </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="designthinking" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Design Thinking </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="ebus" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> E-Business Management </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="recht" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Recht </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="statistik" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Statistik </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="prog1" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Programmierung 1 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="prog2" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Programmierung 2 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="aris" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Architektur von Informationssystemen </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="markom" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Kommunikation & Marketing </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="prototyping" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Konzeption & Prototyping </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="sgdu" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Strategien und Geschäftsmodelle im Digitalen Umfeld </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="softskills2" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Soft Skills 2  </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="reque" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Requirements Engineering </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="dima" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Digital Marketing </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="pro1" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Projektmanagement 1 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="pro2" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Projektmanagement 2 </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="dbms" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Datenbankmanagementsysteme </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="hci" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Human Computer Interaction </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="masofo" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Markt- und Sozialforschung </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="ecommerce" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> E-Commerce </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="bpe" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Business Process Engineering </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="unternehmensprojekt" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Unternehmensprojekt </span>
     </label>
     <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
+      <input name="thesis" class="form-check-input flex-shrink-0" type="checkbox" >
       <span> Bachelor Thesis </span>
     </label>
   </div>
 
+     <!-- rechte Spalte mit den Wahlpflichtmodulen wird geöffnet -->
     <div class="list-group mx-0">
     <h4>Wahlpflichtmodule</h4>
     <label class="list-group-item d-flex gap-2">
@@ -238,12 +250,17 @@
 
     </div>
 </div>
+
+
+
 <br><br>
 <div class="container">
         <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-primary">Weiter</button>
+            <button type="submit" class="btn btn-primary">Weiter</button>
         </div>
 <br><br>
+
+    </form>
 
 </body>
 </html>

@@ -4,6 +4,8 @@ Da das Studium durch Wahlpflichtmodule zu einem grossen Teil selbst gestaltet we
 Ausserden soll ein Notenrechner integriert werden, welcher den aktuellen Notenschnitt ausrechnen kann.
 
 # Funktionalitäten
+## Funktionalität 1: ECTS-Rechner
+Anhand der ausgewählten Module soll ausgerechnet werden
 
 # Ablauf
 ![Diagramm](./img/ablaufdiagramm.svg)
