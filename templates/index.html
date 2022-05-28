@@ -36,9 +36,23 @@
   <div class="list-group mx-0">
     <h4>Pflichtmodule</h4>
 
-    <!-- im label element wird jeweils eine Checkbox platziert
+    <!-- alt: im label element wird jeweils eine Checkbox platziert
     # Pro Modul wird ein label erstellt
     # mit dem "name" wird später das ausgewählte modul in python angesprochen -->
+
+    <!-- die Module werden mit einer for schlaufe aus dem json file module geladen -->
+
+
+      {% for modul in module  %}
+
+      <label class="list-group-item d-flex gap-2">
+        <input name="{{  }}" class="form-check-input flex-shrink-0" type="checkbox">
+        <span> Englisch B2 </span>
+      </label>
+
+      {% endfor %}
+
+
     <label class="list-group-item d-flex gap-2">
       <input name="englischb2" class="form-check-input flex-shrink-0" type="checkbox"  >
       <span> Englisch B2 </span>

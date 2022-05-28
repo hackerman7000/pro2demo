@@ -34,8 +34,6 @@ faecher = {
     "unternehmensprojekt": {"ects": 4, "gruppe": "pflicht"},
     "thesis": {"ects": 4, "gruppe": "pflicht"},
 
-
-
            }
 
 @app.route('/')
@@ -49,6 +47,13 @@ def hello_ects():
         # Liste L wird erstellt, Module werden falls angewählt in die Liste aufgenommen
         L = []
         ECTS = 180
+        ECTS_UX = 8
+        ECTS_UX_Major = 20
+        ECTS_DI = 8
+        ECTS_DI_Major = 20
+        ECTS_IT = 8
+        ECTS_IT_Major = 20
+        ECTS_SM = 4
 
 
         for key, value in faecher.items():
