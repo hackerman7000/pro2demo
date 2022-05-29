@@ -173,5 +173,174 @@
     "Modulgruppe": "Pflicht",
     "Absolviert": false,
     "Note": ""
+},
+{
+    "Modul": "Content Marketing & Storytelling",
+    "ECTS": 4,
+    "Modulgruppe": "User Experience",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Design Introduction",
+    "ECTS": 4,
+    "Modulgruppe": "User Experience",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Expirience Reality",
+    "ECTS": 4,
+    "Modulgruppe": "User Experience",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Markenführung & ICH-Marke",
+    "ECTS": 4,
+    "Modulgruppe": "User Experience",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "User Research und Workshop Moderation",
+    "ECTS": 4,
+    "Modulgruppe": "User Experience",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Big Data Vertiefung",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Design Introduction",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Business Intelligence und Big Data",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "IT-Sicherheit und Standards im Digital Business",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Konzeption und Umsetzung einer Webapplikation",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Makerspace: IoT Use Case",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Webprogrammierung",
+    "ECTS": 4,
+    "Modulgruppe": "Information Technology",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Aktuelle Trends und Themen",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Datenschutzrecht in der Schweiz und Europa",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Digital Disruption Potential",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Information and Data Management",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Information Consulting",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Sales im Digital Business",
+    "ECTS": 4,
+    "Modulgruppe": "Digital Innovation",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Business-Englisch C1",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Entrepreneurial Accounting",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "Scientific Writing",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "VWL-Mikroökonomie",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "HCE - Human Centric Entrepreneurship 1",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
+},
+{
+    "Modul": "HCE - Human Centric Entrepreneurship 2",
+    "ECTS": 4,
+    "Modulgruppe": "Sozial- und Methodenkompetenz",
+    "Absolviert": false,
+    "Note": ""
 }
+
 ]
