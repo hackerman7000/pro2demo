@@ -2,6 +2,10 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+import plotly.express as px
+from plotly.offline import plot
+
+
 app = Flask("__name__")
 
 # dict wird erstellt, pro modul wird noch ein unter-dict eingebaut mit den Werten für die Berechung für die ECTS
@@ -71,9 +75,23 @@ def hello_ects():
 def hello_noten():
     return render_template('noten.html')
 
+
+def get_data():
+    modulgruppen = ["UX", "IT", "DI", "SM"]
+    absolvierte_ects = [4, 0, 0, 0]
+    return modulgruppen, absolvierte_ects
+
+def viz():
+    modulgruppe, absolvierte_ects = get_data()
+    fig = px.bar(x=modulgruppe, y=absolvierte_ects)
+    div = plot(fig, output_type="div")
+    return div
+
+
 @app.route('/auswertung.html')
 def hello_auswertung():
-    return render_template('auswertung.html')
+    div = viz()
+    return render_template('auswertung.html', viz_div=div)
 
 
 
