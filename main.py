@@ -39,7 +39,9 @@ def hello_home():
         if element["Modulgruppe"] == "Pflicht":
             module_pflicht.append(element["Modul"])
         else:
-            module_wp.append([element["Modul"], element["Modulgruppe"]])
+            module_wp.append(element["Modul"])
+
+            # alt: module_wp.append([element["Modul"], element["Modulgruppe"]])
 
     # Wenn der "Zurücksetzen" Button geklickt wird, werden die Module alle auf false (nicht absolviert) gestellt
     # Zudem werden die ECTS auf den Startwert zurückgesetzt
@@ -48,6 +50,14 @@ def hello_home():
             for element in datei_inhalt:
                 element["Absolviert"] = False
             ects_inhalt["ECTS"] = 180
+            ects_inhalt["ECTS_UX"] = 8
+            ects_inhalt["ECTS_UX_Major"] = 20
+            ects_inhalt["ECTS_DI"] = 8
+            ects_inhalt["ECTS_DI_Major"] = 20
+            ects_inhalt["ECTS_IT"] = 8
+            ects_inhalt["ECTS_IT_Major"] = 20
+            ects_inhalt["ECTS_SM"] = 4
+
 
     # Die bearbeiteten Daten werden zurück in die json Files geladen
     # Somit speichert man die Module & ECTS Punkte auch, wenn das Programm geschlossen wird
@@ -82,22 +92,27 @@ def hello_ects():
         ects_inhalt = {}
 
 
-    global L
-    global ECTS
-
     if request.method == 'POST':
         print("Weiter wurde RICHTIG gedrückt")
-        # Liste L wird erstellt, Module werden falls angewählt in die Liste aufgenommen
-        L = []
 
         # Wenn ein Modul ausgewähl wurde wird der Wert (falls er noch False ist) von "Absolviert" auf True gesetzt
         # Zusätzlich wird der ECTS Wert des Moduls dem Gesamtwert der ECTS abgezogen
         for element in datei_inhalt:
             if request.form.get(element["Modul"]):
                 if element["Absolviert"] == False:
-                    print("element erkannt: " + element["Modul"])
                     element["Absolviert"] = True
                     ects_inhalt["ECTS"] = ects_inhalt["ECTS"] - element["ECTS"]
+                    if element["Modulgruppe"] == "User Experience":
+                        ects_inhalt["ECTS_UX"] = ects_inhalt["ECTS_UX"] - element["ECTS"]
+                        ects_inhalt["ECTS_UX_Major"] = ects_inhalt["ECTS_UX_Major"] - element["ECTS"]
+                    elif element["Modulgruppe"] == "Information Technology":
+                        ects_inhalt["ECTS_IT"] = ects_inhalt["ECTS_IT"] - element["ECTS"]
+                        ects_inhalt["ECTS_IT_Major"] = ects_inhalt["ECTS_IT_Major"] - element["ECTS"]
+                    elif element["Modulgruppe"] == "Digital Innovation":
+                        ects_inhalt["ECTS_DI"] = ects_inhalt["ECTS_DI"] - element["ECTS"]
+                        ects_inhalt["ECTS_DI_Major"] = ects_inhalt["ECTS_DI_Major"] - element["ECTS"]
+                    elif element["Modulgruppe"] == "Sozial- und Methodenkompetenz":
+                        ects_inhalt["ECTS_SM"] = ects_inhalt["ECTS_SM"] - element["ECTS"]
 
 
         # Die bearbeiteten Daten werden zurück in die json Files geladen
@@ -109,7 +124,7 @@ def hello_ects():
             json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
 
     # return auf ects.html und Übergabe der benötigten Werte
-    return render_template('ects.html', ECTS=ects_inhalt["ECTS"])
+    return render_template('ects.html', ECTS=ects_inhalt["ECTS"], ECTS_UX=ects_inhalt["ECTS_UX"], ECTS_IT=ects_inhalt["ECTS_IT"], ECTS_DI=ects_inhalt["ECTS_DI"], ECTS_SM=ects_inhalt["ECTS_SM"], ECTS_UX_Major=ects_inhalt["ECTS_UX_Major"], ECTS_IT_Major=ects_inhalt["ECTS_IT_Major"], ECTS_DI_Major=ects_inhalt["ECTS_DI_Major"])
 
 
 

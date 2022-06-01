@@ -43,6 +43,7 @@
       </label>
       {% endfor %}
 
+
   </div>
 
      <!-- rechte Spalte mit den Wahlpflichtmodulen wird geöffnet -->
@@ -56,7 +57,8 @@
       {% for modul in module_wp  %}
       <label class="list-group-item d-flex gap-2">
       <input name="{{ modul }}" class="form-check-input flex-shrink-0" type="checkbox"  >
-      <span> {{ modul[0] }} <small class="d-block text-muted">{{ modul[1] }}</small></span>
+      <span> {{ modul }} </span>
+      <!-- alt: <span> {{ modul[0] }} <small class="d-block text-muted">{{ modul[1] }}</small></span> -->
       </label>
       {% endfor %}
 

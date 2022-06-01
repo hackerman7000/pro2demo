@@ -21,16 +21,12 @@
       </ul>
     </header>
 </div>
-<br>
-
-
 
 
 <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold">Du hast xx von 180 ECTS erreicht!</h1>
+    <h1 class="display-5 fw-bold">Du hast {{ 180 - ECTS }} von 180 ECTS erreicht!</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">
-         Folgende Module wurden absolviert: {{liste}}
+      <p class="lead mb-4"><br>
 
 <br><br>
 
@@ -40,17 +36,17 @@ So viele ECTS Punkte musst du insgesamt noch machen:
 <br><br>
 
 So viele ECTS benötigst du mindestens noch in den Wahlpflichtmodulen:
-<br> User Experience:
-<br> Information Technology:
-<br> Digital Innovation:
-<br> Sozial- und Methodenkompetenz:
+<br> User Experience: {{ ECTS_UX }}
+<br> Information Technology: {{ ECTS_IT }}
+<br> Digital Innovation: {{ ECTS_DI }}
+<br> Sozial- und Methodenkompetenz: {{ ECTS_SM }}
 
 <br><br>
 
 Für einen Major benötigst du noch so viel ECTS:
-<br> User Experience:
-<br> Information Technology:
-<br> Digital Innovation:
+<br> User Experience: {{ ECTS_UX_Major }}
+<br> Information Technology: {{ ECTS_IT_Major }}
+<br> Digital Innovation: {{ ECTS_DI_Major }}
 
 <br><br>
 Folgende Module könntest du noch gut gebrauchen:
