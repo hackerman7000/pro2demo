@@ -16,57 +16,92 @@ faecher = {
 }
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def hello_home():
-    return render_template('index.html')
+    module_pflicht = []
+    module_wp = []
+    try:
+        with open("data/module.json") as open_file:
+            datei_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        datei_inhalt = []
+
+    try:
+        with open("data/ects.json") as open_file:
+            ects_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        ects_inhalt = {}
+
+    for element in datei_inhalt:
+        if element["Modulgruppe"] == "Pflicht":
+            module_pflicht.append(element["Modul"])
+        else:
+            module_wp.append([element["Modul"], element["Modulgruppe"]])
+
+    if request.method == 'POST':
+        if request.form.get("zuruecksetzen") == "zuruecksetzen":
+            for element in datei_inhalt:
+                element["Absolviert"] = False
+            ects_inhalt["ECTS"] = 180
+
+    with open("data/module.json", "w") as open_file:
+        json.dump(datei_inhalt, open_file, indent=4, separators=(",", ":"))
+    with open("data/ects.json", "w") as open_file:
+        json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
+
+
+    return render_template('index.html', module_pflicht=module_pflicht, module_wp=module_wp)
+
+
 
 
 @app.route('/ects.html', methods=['get', 'post'])
 def hello_ects():
+    try:
+        with open("data/module.json") as open_file:
+            datei_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        datei_inhalt = []
+
+    try:
+        with open("data/ects.json") as open_file:
+            ects_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        ects_inhalt = {}
+
+
     global L
+    global ECTS
 
     if request.method == 'POST':
-
+        print("Weiter wurde RICHTIG gedrückt")
         # Liste L wird erstellt, Module werden falls angewählt in die Liste aufgenommen
         L = []
 
-
         # ECTS-Punke fürs Studium und die einzelnen Module, um damit den Fortschritt berechnen zu können
-        ECTS = 180
-        ECTS_UX = 8
-        ECTS_UX_Major = 20
-        ECTS_DI = 8
-        ECTS_DI_Major = 20
-        ECTS_IT = 8
-        ECTS_IT_Major = 20
-        ECTS_SM = 4
+       # ECTS = 180
+       #  ECTS_UX = 8
+       #  ECTS_UX_Major = 20
+       #  ECTS_DI = 8
+       #  ECTS_DI_Major = 20
+       #  ECTS_IT = 8
+       #  ECTS_IT_Major = 20
+       #  ECTS_SM = 4
 
-        datei_name = "module.json"
+        for element in datei_inhalt:
+            if request.form.get(element["Modul"]):
+                if element["Absolviert"] == False:
+                    print("element erkannt: " + element["Modul"])
+                    element["Absolviert"] = True
+                    ects_inhalt["ECTS"] = ects_inhalt["ECTS"] - element["ECTS"]
 
-        try:
-            with open(datei_name) as open_file:
-                datei_inhalt = json.load(open_file)
-        except FileNotFoundError:
-            datei_inhalt = {}
 
-        print("")
+        with open("data/module.json", "w") as open_file:
+            json.dump(datei_inhalt, open_file, indent=4, separators=(",", ":"))
+        with open("data/ects.json", "w") as open_file:
+            json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
 
-        for key, value in faecher.items():
-            if request.form.get(key):
-                print("TRUE")
-                # Modul wird in die Liste L gespeichert
-                L.append(key)
-                ECTS = ECTS - faecher[key]["ects"]
-
-        for key, value in faecher.items():
-            if request.form.get(key):
-                print("TRUE")
-                # Modul wird in die Liste L gespeichert
-                L.append(key)
-                ECTS = ECTS - faecher[key]["ects"]
-
-    return render_template('ects.html', liste=L, ECTS=ECTS)
-
+    return render_template('ects.html', ECTS=ects_inhalt["ECTS"])
 
 @app.route('/noten.html')
 def hello_noten():

@@ -38,14 +38,14 @@
 
        <!-- die Module werden mit einer for schlaufe aus dem json file module geladen -->
 
-      {% for modul in module  %}
-
+      {% for modul in module_pflicht  %}
+      <label class="list-group-item d-flex gap-2">
+      <input name="{{ modul }}" class="form-check-input flex-shrink-0" type="checkbox"  >
+      <span> {{ modul }} </span>
+      </label>
       {% endfor %}
 
-    <label class="list-group-item d-flex gap-2">
-      <input name="englischb2" class="form-check-input flex-shrink-0" type="checkbox"  >
-      <span> Englisch B2 </span>
-    </label>
+
 
   </div>
 
@@ -58,14 +58,12 @@
       <!-- die Wahlpflichtmodule werden mit einer for schlaufe aus dem json file module geladen
      zusätzlich wird hier die Modulgruppe angegeben, da die für die Berechnung und Übersichtlichkeit relevant ist-->
 
-
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Content Marketing & Story Telling <small class="d-block text-muted">User Experience</small> </span>
-    </label>
-
-
-
+      {% for modul in module_wp  %}
+      <label class="list-group-item d-flex gap-2">
+      <input name="{{ modul }}" class="form-check-input flex-shrink-0" type="checkbox"  >
+      <span> {{ modul[0] }} <small class="d-block text-muted">{{ modul[1] }}</small></span>
+      </label>
+      {% endfor %}
 
 
     </div>
@@ -78,8 +76,17 @@
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Weiter</button>
 </div>
-<br><br>
 
+
+<br><br>
+</div>
+</form>
+
+<form method="POST">
+    <div class="container">
+        <div class="col-md-12 text-center">
+            <button name="zuruecksetzen" value="zuruecksetzen" type="submit" class="btn btn-primary">Zurücksetzen</button>
+</div>
 </form>
 
 </body>
