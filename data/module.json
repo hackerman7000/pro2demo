@@ -17,14 +17,14 @@
         "Modul":"Wissenschaftliches arbeiten",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
         "Modul":"Mathematik",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {

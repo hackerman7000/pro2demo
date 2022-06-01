@@ -7,7 +7,7 @@
 
 
 <body>
-
+<!-- Header mit der Navigation -->
 <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
@@ -17,7 +17,6 @@
 
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="ects.html" class="nav-link">ECTS</a></li>
-        <li class="nav-item"><a href="noten.html" class="nav-link">Noten</a></li>
         <li class="nav-item"><a href="auswertung.html" class="nav-link">Auswertung</a></li>
       </ul>
     </header>
@@ -26,7 +25,7 @@
 <h1 class="lead mb-4 text-center">Wähle deine besuchten Module aus. <br><br></h1>
 
 
-<!-- >Formular wird geöffnet, durch action wird beim submit auf die ECTS-Seite verlinkt -->
+<!-- >Formular wird geöffnet, durch action wird beim Weiter-Button auf die ECTS-Seite verlinkt -->
 <form method="POST" action="{{ url_for('hello_ects') }}">
 
 <!--  Container mit allen Modulen wird geöffnet -->
@@ -36,8 +35,7 @@
   <div class="list-group mx-0">
     <h4>Pflichtmodule</h4>
 
-       <!-- die Module werden mit einer for schlaufe aus dem json file module geladen -->
-
+       <!-- die Module werden mit einer for schlaufe aus der Liste module_pflicht geladen -->
       {% for modul in module_pflicht  %}
       <label class="list-group-item d-flex gap-2">
       <input name="{{ modul }}" class="form-check-input flex-shrink-0" type="checkbox"  >
@@ -45,17 +43,14 @@
       </label>
       {% endfor %}
 
-
-
   </div>
 
      <!-- rechte Spalte mit den Wahlpflichtmodulen wird geöffnet -->
-
     <div class="list-group mx-0">
 
     <h4>Wahlpflichtmodule</h4>
 
-      <!-- die Wahlpflichtmodule werden mit einer for schlaufe aus dem json file module geladen
+      <!-- die Wahlpflichtmodule werden mit einer for schlaufe aus der Liste module_wp geladen
      zusätzlich wird hier die Modulgruppe angegeben, da die für die Berechnung und Übersichtlichkeit relevant ist-->
 
       {% for modul in module_wp  %}
@@ -72,6 +67,7 @@
 
 
 <br><br>
+     <!-- Mit dem Weiter-Button kommt man auf die Seite ects.html und die ausgewählten Module werden ins json übertragen -->
 <div class="container">
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Weiter</button>
@@ -83,11 +79,14 @@
 </form>
 
 <form method="POST">
+    <!-- Mit dem Zurücksetzen-Button setzt man alle Werte in den json Files auf den Default Wert zurück -->
     <div class="container">
         <div class="col-md-12 text-center">
             <button name="zuruecksetzen" value="zuruecksetzen" type="submit" class="btn btn-primary">Zurücksetzen</button>
-</div>
+        </div>
+    </div>
 </form>
+<br><br>
 
 </body>
 </html>
