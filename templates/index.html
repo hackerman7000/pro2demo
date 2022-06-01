@@ -36,22 +36,11 @@
   <div class="list-group mx-0">
     <h4>Pflichtmodule</h4>
 
-    <!-- alt: im label element wird jeweils eine Checkbox platziert
-    # Pro Modul wird ein label erstellt
-    # mit dem "name" wird später das ausgewählte modul in python angesprochen -->
-
-    <!-- die Module werden mit einer for schlaufe aus dem json file module geladen -->
-
+       <!-- die Module werden mit einer for schlaufe aus dem json file module geladen -->
 
       {% for modul in module  %}
 
-      <label class="list-group-item d-flex gap-2">
-        <input name="{{Modul}}" class="form-check-input flex-shrink-0" type="checkbox">
-        <span> Englisch B2 </span>
-      </label>
-
       {% endfor %}
-
 
     <label class="list-group-item d-flex gap-2">
       <input name="englischb2" class="form-check-input flex-shrink-0" type="checkbox"  >
@@ -61,100 +50,20 @@
   </div>
 
      <!-- rechte Spalte mit den Wahlpflichtmodulen wird geöffnet -->
+
     <div class="list-group mx-0">
+
     <h4>Wahlpflichtmodule</h4>
+
+      <!-- die Wahlpflichtmodule werden mit einer for schlaufe aus dem json file module geladen
+     zusätzlich wird hier die Modulgruppe angegeben, da die für die Berechnung und Übersichtlichkeit relevant ist-->
+
+
     <label class="list-group-item d-flex gap-2">
       <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
       <span> Content Marketing & Story Telling <small class="d-block text-muted">User Experience</small> </span>
     </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Design Introduction <small class="d-block text-muted">User Experience</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Experience Reality <small class="d-block text-muted">User Experience</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Markenführung & ICH-Marke <small class="d-block text-muted">User Experience</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> User Research and Workshop Moderation <small class="d-block text-muted">User Experience</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Big Data Vertiefung <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Business Intelligence und Big Data <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> IT-Sicherheit und Standards im Digital Business <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Konzeption und Umsetzung einer Webapplikation <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Makerspace: IoT Use Case <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Webprogrammierung <small class="d-block text-muted">Information Technology</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Aktuelle Trends und Themen <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Datenschutzrecht in der Schweiz und Europa <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Digital Disruption Potential <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Information and Data Management <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Information Consulting <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Sales im Digital Business <small class="d-block text-muted">Digital Innovation</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Business-Englisch C1 <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Entrepreneurial Accounting <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> Scientific Writing <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> VWL-Mikroökonomie <small class="d-block text-muted">Sozial- und Methodenkompetenz</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> HCE – Human Centric Entrepreneurship 1 <small class="d-block text-muted">Praxis und Transfer</small> </span>
-    </label>
-    <label class="list-group-item d-flex gap-2">
-      <input class="form-check-input flex-shrink-0" type="checkbox" value="" >
-      <span> HCE – Human Centric Entrepreneurship 2 <small class="d-block text-muted">Praxis und Transfer</small> </span>
-    </label>
+
 
 
 
@@ -168,10 +77,10 @@
 <div class="container">
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Weiter</button>
-        </div>
+</div>
 <br><br>
 
-    </form>
+</form>
 
 </body>
 </html>

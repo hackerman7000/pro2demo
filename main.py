@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+import json
+
 import plotly.express as px
 from plotly.offline import plot
 
@@ -24,6 +26,8 @@ def hello_ects():
 
         # Liste L wird erstellt, Module werden falls angewählt in die Liste aufgenommen
         L = []
+
+        # ECTS-Punke fürs Studium und die einzelnen Module, um damit den Fortschritt berechnen zu können
         ECTS = 180
         ECTS_UX = 8
         ECTS_UX_Major = 20
@@ -32,6 +36,23 @@ def hello_ects():
         ECTS_IT = 8
         ECTS_IT_Major = 20
         ECTS_SM = 4
+
+        datei_name = "module.json"
+
+        try:
+            with open(datei_name) as open_file:
+                datei_inhalt = json.load(open_file)
+        except FileNotFoundError:
+            datei_inhalt = {}
+
+        print("")
+
+        for key, value in faecher.items():
+            if request.form.get(key):
+                print("TRUE")
+                # Modul wird in die Liste L gespeichert
+                L.append(key)
+                ECTS = ECTS - faecher[key]["ects"]
 
 
         for key, value in faecher.items():
