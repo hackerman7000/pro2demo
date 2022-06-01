@@ -44,7 +44,7 @@ def hello_home():
             # alt: module_wp.append([element["Modul"], element["Modulgruppe"]])
 
     # Wenn der "Zurücksetzen" Button geklickt wird, werden die Module alle auf false (nicht absolviert) gestellt
-    # Zudem werden die ECTS auf den Startwert zurückgesetzt
+    # Zudem werden die ECTS aus ects.json auf den Startwert zurückgesetzt
     if request.method == 'POST':
         if request.form.get("zuruecksetzen") == "zuruecksetzen":
             for element in datei_inhalt:
