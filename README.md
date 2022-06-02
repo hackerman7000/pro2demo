@@ -18,6 +18,11 @@ Major: Für einen Major benötigt man mind. 20 ECTS in den Modulgruppen "User Ex
 # Funktionalitäten
 ## Funktionalität 1: ECTS-Rechner
 Anhand der ausgewählten Module soll ausgerechnet werden, wie viel ECTS man im Studium gemacht (insgesamt und pro Modulgruppe).
+Dafür werden als Basis Daten aus zwei json Files benötigt:
+* module.json
+* ects.json
+
+In module.json wird für jedes Modul ein Dictionary mit folgenden Werten erstellt: Modul, ECTS, Modulgruppe, Absolviert.
 
 ## Funktionalität 2: Übersicht Studium mit Plotly Grafik
 
