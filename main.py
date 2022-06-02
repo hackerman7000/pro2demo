@@ -23,7 +23,7 @@ def hello_home():
     # die module werden aus der Datei module.json geladen als datei_inhalt.
     # falls das nicht klappt, wird eine leere Liste eröffnet
     try:
-        with open("data/module.json") as open_file:
+        with open("data/module.json", encoding="utf-8") as open_file:
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = []
@@ -61,11 +61,11 @@ def hello_home():
             for element in datei_inhalt:
                 element["Absolviert"] = False
             ects_inhalt["ECTS"] = 180
-            ects_inhalt["ECTS_UX"] = 8
+            ects_inhalt["ECTS_UX_Gesamt"] = 8
             ects_inhalt["ECTS_UX_Major"] = 20
-            ects_inhalt["ECTS_DI"] = 8
+            ects_inhalt["ECTS_DI_Gesamt"] = 8
             ects_inhalt["ECTS_DI_Major"] = 20
-            ects_inhalt["ECTS_IT"] = 8
+            ects_inhalt["ECTS_IT_Gesamt"] = 8
             ects_inhalt["ECTS_IT_Major"] = 20
             ects_inhalt["ECTS_SM"] = 4
 
@@ -104,7 +104,6 @@ def hello_ects():
 
 
     if request.method == 'POST':
-        print("Weiter wurde RICHTIG gedrückt")
 
         # Wenn ein Modul ausgewähl wurde wird der Wert (falls er noch False ist) von "Absolviert" auf True gesetzt
         # Zusätzlich wird der ECTS Wert des Moduls dem Gesamtwert der ECTS abgezogen
@@ -114,13 +113,13 @@ def hello_ects():
                     element["Absolviert"] = True
                     ects_inhalt["ECTS"] = ects_inhalt["ECTS"] - element["ECTS"]
                     if element["Modulgruppe"] == "User Experience":
-                        ects_inhalt["ECTS_UX"] = ects_inhalt["ECTS_UX"] - element["ECTS"]
+                        ects_inhalt["ECTS_UX_Gesamt"] = ects_inhalt["ECTS_UX_Gesamt"] - element["ECTS"]
                         ects_inhalt["ECTS_UX_Major"] = ects_inhalt["ECTS_UX_Major"] - element["ECTS"]
                     elif element["Modulgruppe"] == "Information Technology":
-                        ects_inhalt["ECTS_IT"] = ects_inhalt["ECTS_IT"] - element["ECTS"]
+                        ects_inhalt["ECTS_IT_Gesamt"] = ects_inhalt["ECTS_IT_Gesamt"] - element["ECTS"]
                         ects_inhalt["ECTS_IT_Major"] = ects_inhalt["ECTS_IT_Major"] - element["ECTS"]
                     elif element["Modulgruppe"] == "Digital Innovation":
-                        ects_inhalt["ECTS_DI"] = ects_inhalt["ECTS_DI"] - element["ECTS"]
+                        ects_inhalt["ECTS_DI_Gesamt"] = ects_inhalt["ECTS_DI_Gesamt"] - element["ECTS"]
                         ects_inhalt["ECTS_DI_Major"] = ects_inhalt["ECTS_DI_Major"] - element["ECTS"]
                     elif element["Modulgruppe"] == "Sozial- und Methodenkompetenz":
                         ects_inhalt["ECTS_SM"] = ects_inhalt["ECTS_SM"] - element["ECTS"]
@@ -135,7 +134,7 @@ def hello_ects():
             json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
 
     # return auf ects.html und Übergabe der benötigten Werte
-    return render_template('ects.html', ECTS=ects_inhalt["ECTS"], ECTS_UX=ects_inhalt["ECTS_UX"], ECTS_IT=ects_inhalt["ECTS_IT"], ECTS_DI=ects_inhalt["ECTS_DI"], ECTS_SM=ects_inhalt["ECTS_SM"], ECTS_UX_Major=ects_inhalt["ECTS_UX_Major"], ECTS_IT_Major=ects_inhalt["ECTS_IT_Major"], ECTS_DI_Major=ects_inhalt["ECTS_DI_Major"])
+    return render_template('ects.html', ECTS=ects_inhalt["ECTS"], ECTS_UX_Gesamt=ects_inhalt["ECTS_UX_Gesamt"], ECTS_IT_Gesamt=ects_inhalt["ECTS_IT_Gesamt"], ECTS_DI_Gesamt=ects_inhalt["ECTS_DI_Gesamt"], ECTS_SM=ects_inhalt["ECTS_SM"], ECTS_UX_Major=ects_inhalt["ECTS_UX_Major"], ECTS_IT_Major=ects_inhalt["ECTS_IT_Major"], ECTS_DI_Major=ects_inhalt["ECTS_DI_Major"])
 
 
 
@@ -153,14 +152,25 @@ def hello_auswertung():
 
 
 def get_data():
-    modulgruppen = ["User Experience", "Information Technology", "Digital Innovation", "Sozial- und Methodenkompetenz"]
-    absolvierte_ects = [8, 4, 0, 0]
+    modulgruppen = ["User Experience", "Information Technology", "Digital Innovation"]
+    absolvierte_ects = []
+    try:
+        with open("data/ects.json") as open_file:
+            ects_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        ects_inhalt = {}
+
+    for key, value in ects_inhalt.items():
+        if "_Gesamt" in key:
+            absolvierte_ects.append(8 - value)
     return modulgruppen, absolvierte_ects
 
 
 def viz():
     modulgruppe, absolvierte_ects = get_data()
     fig = px.bar(x=modulgruppe, y=absolvierte_ects)
+    fig.add_hrect(y0=0, y1=8, line_width=0, fillcolor="red", opacity=0.2, annotation_text="Minimum nicht erfüllt", annotation_position="top right")
+    fig.add_hrect(y0=20, y1=40, line_width=0, fillcolor="green", opacity=0.2, annotation_text="Major erreicht", annotation_position="top right")
     div = plot(fig, output_type="div")
 
     return div

@@ -1,10 +1,10 @@
 {
-    "ECTS":180,
-    "ECTS_UX":8,
-    "ECTS_UX_Major":20,
-    "ECTS_DI":8,
+    "ECTS":152,
+    "ECTS_UX_Gesamt":4,
+    "ECTS_UX_Major":16,
+    "ECTS_DI_Gesamt":8,
     "ECTS_DI_Major":20,
-    "ECTS_IT":8,
-    "ECTS_IT_Major":20,
-    "ECTS_SM":4
+    "ECTS_IT_Gesamt":0,
+    "ECTS_IT_Major":12,
+    "ECTS_SM":0
 }

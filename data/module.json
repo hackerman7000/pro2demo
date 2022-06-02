@@ -3,7 +3,7 @@
         "Modul":"Englisch B2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -31,7 +31,7 @@
         "Modul":"Design Thinking",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -59,7 +59,7 @@
         "Modul":"Programmierung 1",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -192,7 +192,7 @@
         "Modul":"Expirience Reality",
         "ECTS":4,
         "Modulgruppe":"User Experience",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -217,10 +217,10 @@
         "Note":""
     },
     {
-        "Modul":"Design Introduction",
+        "Modul":"Java Engineering Boot Camp",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -234,7 +234,7 @@
         "Modul":"IT-Sicherheit und Standards im Digital Business",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -325,7 +325,7 @@
         "Modul":"VWL-Mikro\u00c3\u00b6konomie",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
