@@ -23,6 +23,8 @@ Dafür werden als Basis Daten aus zwei json Files benötigt:
 * ects.json
 
 In module.json wird für jedes Modul ein Dictionary mit folgenden Werten erstellt: Modul, ECTS, Modulgruppe, Absolviert.
+<br> Die Module werden dann auf der Startseite in einer Liste mit Checkboxen angezeigt.
+Dafür wird nur der Name des Moduls benötigt ("Modul") welcher mithilfe einer for-schleife und Jinja auf der index Seite angezeigt wird.
 
 ## Funktionalität 2: Übersicht Studium mit Plotly Grafik
 
