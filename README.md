@@ -23,7 +23,7 @@ Anhand der ausgewählten Module soll ausgerechnet werden, wie viel ECTS man im S
 
 
 # Ablauf
-![Diagramm](./img/ablaufdiagramm.svg)
+![Diagramm](./img/ablaufdiagram.svg)
 
 # Workflow
 ## 1. Dateneingabe: Auswahl der besuchten Module
