@@ -4,342 +4,293 @@
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Soft Skills 1",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Wissenschaftliches arbeiten",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Mathematik",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Design Thinking",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"E-Business Management",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Recht",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Statistik",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Programmierung 1",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Programmierung 2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Architektur von Informationssystemen",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Marketing & Kommunikation",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Prototyping und Konzeption",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Strategien und Gesch\u00c3\u00a4ftsmodelle im digitalen Umfeld",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Softskills 2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Requirements Ingeneering",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Digital Marketing",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Projektmanagement 1",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Projektmanagement 2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"Human Computer Interaction",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Markt- und Sozialforschung",
         "ECTS":6,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"E-Commerce",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"Business Process Engineering",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"Unternehmensprojekt",
         "ECTS":6,
         "Modulgruppe":"Pflicht",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"Bachelor Thesis",
         "ECTS":12,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Content Marketing & Storytelling",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Design Introduction",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Expirience Reality",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"Markenf\u00c3\u00bchrung & ICH-Marke",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"User Research und Workshop Moderation",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Big Data Vertiefung",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Design Introduction",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Business Intelligence und Big Data",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":true,
-        "Note":""
     },
     {
         "Modul":"IT-Sicherheit und Standards im Digital Business",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Konzeption und Umsetzung einer Webapplikation",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Makerspace: IoT Use Case",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Webprogrammierung",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Aktuelle Trends und Themen",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Datenschutzrecht in der Schweiz und Europa",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Digital Disruption Potential",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Information and Data Management",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Information Consulting",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Sales im Digital Business",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Business-Englisch C1",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Entrepreneurial Accounting",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"Scientific Writing",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"VWL-Mikro\u00c3\u00b6konomie",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"HCE - Human Centric Entrepreneurship 1",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     },
     {
         "Modul":"HCE - Human Centric Entrepreneurship 2",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
-        "Note":""
     }
 ]
