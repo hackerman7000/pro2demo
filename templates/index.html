@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <meta charset="utf-8"/>
     <title>Willkommen</title>
 </head>
 
@@ -44,12 +45,10 @@
       {% endfor %}
 
 
-      <h5 style="margin-top: 15px;">Bereits gespeicherte Pflichtmodule:</h5>
+      <h5 style="margin-top: 25px;">Bereits gespeicherte Pflichtmodule:</h5>
 
           {% for modul in module_pflicht_absolviert %}
-            <ul>
-                <li>{{ modul }}</li>
-            </ul>
+                <li style="color: green;">{{ modul }} ✓</li>
           {% endfor %}
 
 
@@ -71,12 +70,10 @@
       </label>
       {% endfor %}
 
-       <h5 style="margin-top: 15px;">Bereits gespeicherte Wahlpflichtmodule:</h5>
+       <h5 style="margin-top: 25px;">Bereits gespeicherte Wahlpflichtmodule:</h5>
 
           {% for modul in module_wp_absolviert %}
-            <ul>
-                <li>{{ modul }}</li>
-            </ul>
+                <li style="color: green;">{{ modul }} ✓</li>
           {% endfor %}
 
 
