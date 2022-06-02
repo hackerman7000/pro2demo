@@ -16,6 +16,10 @@ def hello_home():
     module_pflicht = []
     module_wp = []
 
+    # zwei leere Listen werden eröffnet. Diese werden mit den absolvierten modulen gefüllt und unten auf der index.html Seite angezeigt
+    module_pflicht_absolviert = []
+    module_wp_absolviert = []
+
     # die module werden aus der Datei module.json geladen als datei_inhalt.
     # falls das nicht klappt, wird eine leere Liste eröffnet
     try:
@@ -40,6 +44,13 @@ def hello_home():
             module_pflicht.append(element["Modul"])
         else:
             module_wp.append(element["Modul"])
+
+    for element in datei_inhalt:
+        if element["Absolviert"] == True:
+            if element["Modulgruppe"] == "Pflicht":
+                module_pflicht_absolviert.append(element["Modul"])
+            else:
+                module_wp_absolviert.append(element["Modul"])
 
             # alt: module_wp.append([element["Modul"], element["Modulgruppe"]])
 
@@ -68,7 +79,7 @@ def hello_home():
         json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
 
     # return auf index.html und Übergabe der benötigten Werte
-    return render_template('index.html', module_pflicht=module_pflicht, module_wp=module_wp)
+    return render_template('index.html', module_pflicht=module_pflicht, module_wp=module_wp, module_pflicht_absolviert=module_pflicht_absolviert, module_wp_absolviert=module_wp_absolviert)
 
 
 
@@ -131,7 +142,6 @@ def hello_ects():
 @app.route('/auswertung.html')
 def hello_auswertung():
     div = viz()
-    return render_template('auswertung.html', viz_div=div)
 
     try:
         with open("data/ects.json") as open_file:
@@ -139,9 +149,11 @@ def hello_auswertung():
     except FileNotFoundError:
         ects_inhalt = {}
 
+    return render_template('auswertung.html', viz_div=div)
+
 
 def get_data():
-    modulgruppen = ["UX", "IT", "DI", "SM"]
+    modulgruppen = ["User Experience", "Information Technology", "Digital Innovation", "Sozial- und Methodenkompetenz"]
     absolvierte_ects = [8, 4, 0, 0]
     return modulgruppen, absolvierte_ects
 
@@ -150,6 +162,7 @@ def viz():
     modulgruppe, absolvierte_ects = get_data()
     fig = px.bar(x=modulgruppe, y=absolvierte_ects)
     div = plot(fig, output_type="div")
+
     return div
 
 

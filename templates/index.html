@@ -33,7 +33,7 @@
 
   <!-- linke Spalte mit den Pflichmodulen wird geöffnet -->
   <div class="list-group mx-0">
-    <h4>Pflichtmodule</h4>
+    <h4>Pflichtmodule auswählen:</h4>
 
        <!-- die Module werden mit einer for schlaufe aus der Liste module_pflicht geladen -->
       {% for modul in module_pflicht  %}
@@ -46,13 +46,19 @@
 
       <h5 style="margin-top: 15px;">Bereits gespeicherte Pflichtmodule:</h5>
 
+          {% for modul in module_pflicht_absolviert %}
+            <ul>
+                <li>{{ modul }}</li>
+            </ul>
+          {% endfor %}
+
 
   </div>
 
      <!-- rechte Spalte mit den Wahlpflichtmodulen wird geöffnet -->
     <div class="list-group mx-0">
 
-    <h4>Wahlpflichtmodule</h4>
+    <h4>Wahlpflichtmodule auswählen:</h4>
 
       <!-- die Wahlpflichtmodule werden mit einer for schlaufe aus der Liste module_wp geladen
      zusätzlich wird hier die Modulgruppe angegeben, da die für die Berechnung und Übersichtlichkeit relevant ist-->
@@ -64,6 +70,14 @@
       <!-- alt: <span> {{ modul[0] }} <small class="d-block text-muted">{{ modul[1] }}</small></span> -->
       </label>
       {% endfor %}
+
+       <h5 style="margin-top: 15px;">Bereits gespeicherte Wahlpflichtmodule:</h5>
+
+          {% for modul in module_wp_absolviert %}
+            <ul>
+                <li>{{ modul }}</li>
+            </ul>
+          {% endfor %}
 
 
     </div>
