@@ -133,10 +133,16 @@ def hello_auswertung():
     div = viz()
     return render_template('auswertung.html', viz_div=div)
 
+    try:
+        with open("data/ects.json") as open_file:
+            ects_inhalt = json.load(open_file)
+    except FileNotFoundError:
+        ects_inhalt = {}
+
 
 def get_data():
     modulgruppen = ["UX", "IT", "DI", "SM"]
-    absolvierte_ects = [4, 0, 0, 0]
+    absolvierte_ects = [8, 4, 0, 0]
     return modulgruppen, absolvierte_ects
 
 

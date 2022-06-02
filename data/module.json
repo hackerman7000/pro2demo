@@ -129,7 +129,7 @@
         "Modul":"Projektmanagement 2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -150,21 +150,21 @@
         "Modul":"E-Commerce",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
         "Modul":"Business Process Engineering",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
         "Modul":"Unternehmensprojekt",
         "ECTS":6,
         "Modulgruppe":"Pflicht",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -192,7 +192,7 @@
         "Modul":"Expirience Reality",
         "ECTS":4,
         "Modulgruppe":"User Experience",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
@@ -227,7 +227,7 @@
         "Modul":"Business Intelligence und Big Data",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
-        "Absolviert":false,
+        "Absolviert":true,
         "Note":""
     },
     {
