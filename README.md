@@ -56,6 +56,7 @@ Das bedeutet das alle Module auf nicht Absolviert ("Absolviert": False) gesetz w
 
 ## 3. Datenausgabe: Berechneter Studiumsfortschritt
 Auf der Seite "ECTS" sieht man den berechneten Fortschritt des Studiums. Insgesamt und pro Modulgruppe.
+Zusätzlich wird noch ein individueller Text angezeigt, je nachdem wie weit man ist.
 Bei den Modulgruppen wird zudem angezeigt, wie viel ECTS man minimum benötigt oder für den Major.
 <br>Auf dieser Seite kann man dann entweder weiter zur Auswertungs-Seite oder man kann mit dem Button "Weitere Module hinzufügen" zurück auf die Startseite.
 Zurück auf der Startseite sind dann die bereits gewählten Module unter der Auswahl aufgelistet.
@@ -64,8 +65,6 @@ Zurück auf der Startseite sind dann die bereits gewählten Module unter der Aus
 Auf der Seite "Auswertung" werden die Fortschritte in den Modulgruppen 
 "User Experience", "Information Technology", "Digital Innovation" visuell dargestellt.
 Zudem erkennt man, wie viel man für das Minimum und für den Major noch erledigen muss.
-
-# Probleme
 
 
 # Mögliche zukünftige Erweiterungen des Programms
