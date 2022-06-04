@@ -25,46 +25,51 @@
 
 
 <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold">Du hast {{ 180 - ECTS }} von 180 ECTS erreicht!</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4"><br>
+    <h1 class="display-5 fw-bold">Du hast {{ 180 - ECTS }} von 180 ECTS erreicht.
+    <br>
+        <!-- Eine Individuelle Nachricht (je nach Stand der ECTS) wird ausgegeben. -->
+        {% if (180 - ECTS) < 45 %} Aller Anfang ist schwer :)
+            {% elif 45 < (180 - ECTS) < 90 %} Bald hast du die Hälfte :)
+            {% elif 90 < (180 - ECTS) < 115 %} Die Hälfte ist geschafft :)
+            {% elif 115 < (180 - ECTS) < 150 %} Bald geht es gegen das Ende zu :)
+            {% elif 150 < (180 - ECTS) < 180 %} Nur noch ein paar Module :)
+            {% elif 180 <= (180 - ECTS) %} Herzliche Gratulation :)
+        {% endif %}
+    </h1>
 
-<br>
 
-So viele ECTS Punkte musst du insgesamt noch machen:
-{{ECTS}}
 
-<br><br>
+<div class="col-lg-6 mx-auto">
+    <p class="lead mb-4"><br>
 
-So viele ECTS benötigst du mindestens noch in den Wahlpflichtmodulen:
-<br> User Experience: {{ ECTS_UX_Gesamt }}
-<br> Information Technology: {{ ECTS_IT_Gesamt }}
-<br> Digital Innovation: {{ ECTS_DI_Gesamt }}
-<br> Sozial- und Methodenkompetenz: {{ ECTS_SM }}
+        <br>
+        So viele ECTS Punkte musst du insgesamt noch machen:
+        {{ECTS}}
 
-<br><br>
+        <br><br>
 
-Für einen Major benötigst du noch so viele ECTS:
-<br> User Experience: {{ ECTS_UX_Major }}
-<br> Information Technology: {{ ECTS_IT_Major }}
-<br> Digital Innovation: {{ ECTS_DI_Major }}
+        So viele ECTS benötigst du mindestens noch in den Wahlpflichtmodulen:
+        <br> User Experience: {% if ECTS_UX_Gesamt > 0 %} {{ ECTS_UX_Gesamt }} {% else %} Minimum erreicht! {% endif %}
+        <br> Information Technology: {% if ECTS_IT_Gesamt > 0 %} {{ ECTS_IT_Gesamt }} {% else %} Minimum erreicht! {% endif %}
+        <br> Digital Innovation: {% if ECTS_DI_Gesamt > 0 %} {{ ECTS_DI_Gesamt }} {% else %} Minimum erreicht! {% endif %}
+        <br> Sozial- und Methodenkompetenz: {% if ECTS_SM > 0 %} {{ ECTS_SM }} {% else %} Minimum erreicht! {% endif %}
 
-<br><br>
-Folgende Module könntest du noch gut gebrauchen:
+        <br><br>
+
+        Für einen Major benötigst du noch so viele ECTS:
+        <br> User Experience: {% if ECTS_UX_Major > 0 %} {{ ECTS_UX_Major }} {% else %} Major erreicht, Gratulation! {% endif %}
+        <br> Information Technology: {% if ECTS_IT_Major > 0 %} {{ ECTS_IT_Major }} {% else %} Major erreicht, Gratulation! {% endif %}
+        <br> Digital Innovation: {% if ECTS_DI_Major > 0 %} {{ ECTS_DI_Major }} {% else %} Major erreicht, Gratulation! {% endif %}
 
       </p>
-
-    </div>
-
-<br><br><br><br>
-
+</div>
 
 <br><br>
 
 <form action="{{ url_for('hello_auswertung') }}">
 <div class="container">
         <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Zur Übersicht</button>
+            <button type="submit" class="btn btn-primary">Zur Auswertung</button>
         </div>
 </div>
 </form>

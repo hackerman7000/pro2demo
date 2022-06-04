@@ -3,7 +3,7 @@
         "Modul":"Englisch B2",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
@@ -31,7 +31,7 @@
         "Modul":"Design Thinking",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
@@ -59,7 +59,7 @@
         "Modul":"Programmierung 1",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
@@ -91,7 +91,7 @@
         "Note":""
     },
     {
-        "Modul":"Strategien und Gesch\u00c3\u00a4ftsmodelle im digitalen Umfeld",
+        "Modul":"Strategien und Gesch\u00e4ftsmodelle im digitalen Umfeld",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
@@ -189,14 +189,21 @@
         "Note":""
     },
     {
-        "Modul":"Expirience Reality",
+        "Modul":"Speculative Design",
         "ECTS":4,
         "Modulgruppe":"User Experience",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
-        "Modul":"Markenf\u00c3\u00bchrung & ICH-Marke",
+        "Modul":"Expirience Reality",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Markenf\u00fchrung & ICH-Marke",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
@@ -220,7 +227,7 @@
         "Modul":"Java Engineering Boot Camp",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
@@ -234,7 +241,7 @@
         "Modul":"IT-Sicherheit und Standards im Digital Business",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {
@@ -322,10 +329,10 @@
         "Note":""
     },
     {
-        "Modul":"VWL-Mikro\u00c3\u00b6konomie",
+        "Modul":"VWL-Mikro\u00f6konomie",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
-        "Absolviert":true,
+        "Absolviert":false,
         "Note":""
     },
     {

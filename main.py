@@ -25,7 +25,7 @@ def hello_home():
     # die module werden aus der Datei module.json geladen als datei_inhalt.
     # falls das nicht klappt, wird eine leere Liste eröffnet
     try:
-        with open("data/module.json", encoding="utf-8") as open_file:
+        with open("data/module.json") as open_file:
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = []
@@ -76,9 +76,9 @@ def hello_home():
     # Somit speichert man die Module & ECTS Punkte auch, wenn das Programm geschlossen wird
     # mithilfe indent und seperators werden die Daten übersichtlich im json dargestellt
     with open("data/module.json", "w") as open_file:
-        json.dump(datei_inhalt, open_file, indent=4, separators=(",", ":"))
+        json.dump(datei_inhalt, open_file, indent=4, separators=(",", ":"), ensure_ascii=False)
     with open("data/ects.json", "w") as open_file:
-        json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"))
+        json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"), ensure_ascii=False)
 
     # return auf index.html und Übergabe der benötigten Werte
     return render_template('index.html', module_pflicht=module_pflicht, module_wp=module_wp, module_pflicht_absolviert=module_pflicht_absolviert, module_wp_absolviert=module_wp_absolviert)
@@ -192,9 +192,14 @@ def viz():
     fig = px.bar(x=modulgruppe, y=absolvierte_ects)
 
     # Gestaltung des Diagramms. Roter (Minimum ECTS) und Grüner Bereich (Major) wird ins Diagramm hinzugefügt
-    # Quelle für Diagrammgestaltung: https://plotly.com/python/styling-plotly-express/
+    # Quellen für Diagrammgestaltung: https://plotly.com/python/styling-plotly-express/ und https://plotly.com/python/figure-labels/
     fig.add_hrect(y0=0, y1=8, line_width=0, fillcolor="red", opacity=0.2, annotation_text="Minimum nicht erfüllt", annotation_position="top right")
     fig.add_hrect(y0=20, y1=40, line_width=0, fillcolor="green", opacity=0.2, annotation_text="Major erreicht", annotation_position="top right")
+    fig.update_layout(
+        xaxis_title="Modulgruppen",
+        yaxis_title="ECTS-Punkte",
+    )
+
     div = plot(fig, output_type="div")
 
     # Übergabe des Diagrams
