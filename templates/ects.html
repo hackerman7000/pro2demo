@@ -25,9 +25,10 @@
 
 
 <div class="px-4 py-5 my-5 text-center">
+    <!-- Gesamtergebnis der ECTS Punkte wird als h1 ausgegeben -->
     <h1 class="display-5 fw-bold">Du hast {{ 180 - ECTS }} von 180 ECTS erreicht.
     <br>
-        <!-- Eine Individuelle Nachricht (je nach Stand der ECTS) wird ausgegeben. -->
+        <!-- Eine Individuelle Nachricht (je nach Stand der ECTS) wird zusätzlich ausgegeben -->
         {% if (180 - ECTS) < 45 %} Aller Anfang ist schwer :)
             {% elif 45 < (180 - ECTS) < 90 %} Bald hast du die Hälfte :)
             {% elif 90 < (180 - ECTS) < 115 %} Die Hälfte ist geschafft :)
@@ -48,6 +49,8 @@
 
         <br><br>
 
+        <!-- Einzelne Werte für die benötigten ECTS Punkte werden ausgegeben
+        falls die minimalen Punkte erreicht wurden erscheint "Minimum erreicht!" -->
         So viele ECTS benötigst du mindestens noch in den Wahlpflichtmodulen:
         <br> User Experience: {% if ECTS_UX_Gesamt > 0 %} {{ ECTS_UX_Gesamt }} {% else %} Minimum erreicht! {% endif %}
         <br> Information Technology: {% if ECTS_IT_Gesamt > 0 %} {{ ECTS_IT_Gesamt }} {% else %} Minimum erreicht! {% endif %}
@@ -56,6 +59,8 @@
 
         <br><br>
 
+        <!-- Einzelne Werte für den Major in der Modulgruppe werden ausgegeben
+        falls der Major erreicht wurden erscheint "Major erreicht, Gratulation!" -->
         Für einen Major benötigst du noch so viele ECTS:
         <br> User Experience: {% if ECTS_UX_Major > 0 %} {{ ECTS_UX_Major }} {% else %} Major erreicht, Gratulation! {% endif %}
         <br> Information Technology: {% if ECTS_IT_Major > 0 %} {{ ECTS_IT_Major }} {% else %} Major erreicht, Gratulation! {% endif %}
@@ -66,6 +71,7 @@
 
 <br><br>
 
+<!-- Mit diesem Button gelangt man auf die Auswertungs Seite -->
 <form action="{{ url_for('hello_auswertung') }}">
 <div class="container">
         <div class="col-md-12 text-center">
@@ -74,7 +80,10 @@
 </div>
 </form>
 <br><br>
+
 <form action="{{ url_for('hello_home') }}">
+
+<!-- Mit diesem Button gelangt man zurück auf die Startseite -->
 <div class="container">
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-secondary">Weitere Module hinzufügen</button>

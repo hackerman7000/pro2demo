@@ -25,7 +25,7 @@ def hello_home():
     # die module werden aus der Datei module.json geladen als datei_inhalt.
     # falls das nicht klappt, wird eine leere Liste eröffnet
     try:
-        with open("data/module.json") as open_file:
+        with open("data/module.json", encoding="utf8") as open_file:
             datei_inhalt = json.load(open_file)
     except FileNotFoundError:
         datei_inhalt = []
@@ -38,44 +38,45 @@ def hello_home():
     except FileNotFoundError:
         ects_inhalt = {}
 
-    # Alle elemente welche aus module.json geladen wurden, werden per for Schleife durchlaufen.
-    # Falls das Modul die Modulgruppe "Pflicht" hat kommt es in die Liste "module_pflicht"
-        # Sonst kommt es in die Liste "module_wp". wp steht für Wahlpflicht
+    # Alle elemente welche aus module.json geladen wurden, werden per for Schleife iteriert.
     for element in datei_inhalt:
+        # Falls das Modul die Modulgruppe "Pflicht" hat kommt es in die Liste "module_pflicht"
+        # Dabei wird nur der Modulname in die Liste gespeichert, da später nur dieser auf der Startseite aufgegeben wird
         if element["Modulgruppe"] == "Pflicht":
             module_pflicht.append(element["Modul"])
+        # Sonst kommt es in die Liste "module_wp". wp steht für Wahlpflicht
         else:
             module_wp.append(element["Modul"])
 
     # Die Gleiche for Schleife wird nochmals durchlaufen.
-    # Dabei werden jetzt die Absolvierten Module in die Listen "module_pflicht_absolviert" und "module_wp_absolviert" gespeichert
     for element in datei_inhalt:
+        # Jetzt die Absolvierten Module zusätzlich in die Listen "module_pflicht_absolviert" und "module_wp_absolviert" gespeichert
         if element["Absolviert"] == True:
             if element["Modulgruppe"] == "Pflicht":
                 module_pflicht_absolviert.append(element["Modul"])
             else:
                 module_wp_absolviert.append(element["Modul"])
 
-    # Wenn der "Zurücksetzen" Button geklickt wird, werden die Module alle auf false (nicht absolviert) gestellt
-    # Zudem werden die ECTS aus ects.json auf den Startwert zurückgesetzt
-    if request.method == 'POST':
-        if request.form.get("zuruecksetzen") == "zuruecksetzen":
-            for element in datei_inhalt:
-                element["Absolviert"] = False
-            ects_inhalt["ECTS"] = 180
-            ects_inhalt["ECTS_UX_Gesamt"] = 8
-            ects_inhalt["ECTS_UX_Major"] = 20
-            ects_inhalt["ECTS_DI_Gesamt"] = 8
-            ects_inhalt["ECTS_DI_Major"] = 20
-            ects_inhalt["ECTS_IT_Gesamt"] = 8
-            ects_inhalt["ECTS_IT_Major"] = 20
-            ects_inhalt["ECTS_SM"] = 4
+        # Wenn der "Zurücksetzen" Button geklickt wird, werden die Module alle auf false (nicht absolviert) gestellt
+        if request.method == 'POST':
+            if request.form.get("zuruecksetzen") == "zuruecksetzen":
+                for element in datei_inhalt:
+                    element["Absolviert"] = False
+                # die ECTS aus ects.json werden zudem auf den Startwert zurückgesetzt
+                ects_inhalt["ECTS"] = 180
+                ects_inhalt["ECTS_UX_Gesamt"] = 8
+                ects_inhalt["ECTS_UX_Major"] = 20
+                ects_inhalt["ECTS_DI_Gesamt"] = 8
+                ects_inhalt["ECTS_DI_Major"] = 20
+                ects_inhalt["ECTS_IT_Gesamt"] = 8
+                ects_inhalt["ECTS_IT_Major"] = 20
+                ects_inhalt["ECTS_SM"] = 4
 
 
     # Die bearbeiteten Daten werden zurück in die json Files geladen
     # Somit speichert man die Module & ECTS Punkte auch, wenn das Programm geschlossen wird
     # mithilfe indent und seperators werden die Daten übersichtlich im json dargestellt
-    with open("data/module.json", "w") as open_file:
+    with open("data/module.json", "w", encoding="utf8") as open_file:
         json.dump(datei_inhalt, open_file, indent=4, separators=(",", ":"), ensure_ascii=False)
     with open("data/ects.json", "w") as open_file:
         json.dump(ects_inhalt, open_file, indent=4, separators=(",", ":"), ensure_ascii=False)
@@ -106,15 +107,15 @@ def hello_ects():
 
 
     if request.method == 'POST':
-
         # Wenn ein Modul ausgewähl wurde wird der Wert (falls er noch False ist) von "Absolviert" auf True gesetzt
-        # Zusätzlich wird der ECTS Wert des Moduls dem Wert "ECTS" und dem ECTS_Wert der jeweiligen Modulgruppe abgezogen
         for element in datei_inhalt:
             if request.form.get(element["Modul"]):
 
                 # Durch diese if Abfrage wird verhindert, dass ein Modul mehrmals ausgewählt wird
                 if element["Absolviert"] == False:
                     element["Absolviert"] = True
+
+                    # Der ECTS Wert des Moduls wird dem Wert "ECTS" und dem ECTS_Wert der jeweiligen Modulgruppe abgezogen
                     ects_inhalt["ECTS"] = ects_inhalt["ECTS"] - element["ECTS"]
                     if element["Modulgruppe"] == "User Experience":
                         ects_inhalt["ECTS_UX_Gesamt"] = ects_inhalt["ECTS_UX_Gesamt"] - element["ECTS"]
@@ -163,7 +164,7 @@ def hello_auswertung():
 # Hier werden die Daten für das Diagramm aus Plotly definiert
 def get_data():
 
-    # die Modulgruppen werden hier definiert und sind fix, deshalb können sie manuell eingegeben werden
+    # die Modulgruppen werden hier definiert und sind fix, deshalb können sie hart codiert eingegeben werden
     modulgruppen = ["User Experience", "Information Technology", "Digital Innovation"]
 
     # Eine leere Liste wird eröffnet, in welche die ECTS-Werte aus "ects.json" dynamisch geladen werden
@@ -178,9 +179,9 @@ def get_data():
         ects_inhalt = {}
 
     # Damit nur die gewünschten Werte geladen werden, wird mit einer if Abfrage sichergestellt, dass nur die Werte welche "_Gesamt" enthalten geladen werden
-    # Diese drei Werte werden umgerechnet, damit man sie in der Grafik richtig anzeigen kann und in die Liste "absolvierte_ects" geladen
     for key, value in ects_inhalt.items():
         if "_Gesamt" in key:
+            # Diese drei Werte werden umgerechnet, damit man sie in der Grafik richtig anzeigen kann und in die Liste "absolvierte_ects" geladen
             absolvierte_ects.append(8 - value)
     return modulgruppen, absolvierte_ects
 

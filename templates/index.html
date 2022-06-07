@@ -44,7 +44,7 @@
       </label>
       {% endfor %}
 
-
+      <!--  Bereits ausgewählte Pflichtmodule werden unter der Auswahl angezeigt. -->
       <h5 style="margin-top: 25px;">Bereits gespeicherte Pflichtmodule:</h5>
 
           {% for modul in module_pflicht_absolviert %}
@@ -70,31 +70,31 @@
       </label>
       {% endfor %}
 
+
+       <!--  Bereits ausgewählte Wahlpflichtmodule werden unter der Auswahl angezeigt. -->
        <h5 style="margin-top: 25px;">Bereits gespeicherte Wahlpflichtmodule:</h5>
 
           {% for modul in module_wp_absolviert %}
                 <li style="color: green;">{{ modul }} ✓</li>
           {% endfor %}
 
-
     </div>
 </div>
 
-
-
 <br><br>
-     <!-- Mit dem Weiter-Button kommt man auf die Seite ects.html und die ausgewählten Module werden ins json übertragen -->
+
+<!-- Mit dem Weiter-Button kommt man auf die Seite ects.html und die ausgewählten Module werden ins json übertragen -->
 <div class="container">
         <div class="col-md-12 text-center">
             <button type="submit" class="btn btn-primary">Weiter</button>
 </div>
-
 
 <br><br>
 </div>
 </form>
 
 <form method="POST">
+
     <!-- Mit dem Zurücksetzen-Button setzt man alle Werte in den json Files auf den Default Wert zurück -->
     <div class="container">
         <div class="col-md-12 text-center">
