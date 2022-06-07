@@ -91,7 +91,7 @@
         "Note":""
     },
     {
-        "Modul":"Strategien und Gesch\u00e4ftsmodelle im digitalen Umfeld",
+        "Modul":"Strategien und Geschäftsmodelle im digitalen Umfeld",
         "ECTS":4,
         "Modulgruppe":"Pflicht",
         "Absolviert":false,
@@ -182,6 +182,27 @@
         "Note":""
     },
     {
+        "Modul":"Innovative Strategic Design Practices",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Digital Storytelling",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Eye Tracking",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
         "Modul":"Design Introduction",
         "ECTS":4,
         "Modulgruppe":"User Experience",
@@ -203,7 +224,21 @@
         "Note":""
     },
     {
-        "Modul":"Markenf\u00fchrung & ICH-Marke",
+        "Modul":"Digital Lead Generation-Lab",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Markenführung & ICH-Marke",
+        "ECTS":4,
+        "Modulgruppe":"User Experience",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Behavioral Economics",
         "ECTS":4,
         "Modulgruppe":"User Experience",
         "Absolviert":false,
@@ -218,6 +253,13 @@
     },
     {
         "Modul":"Big Data Vertiefung",
+        "ECTS":4,
+        "Modulgruppe":"Information Technology",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Web Development",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
         "Absolviert":false,
@@ -252,6 +294,27 @@
         "Note":""
     },
     {
+        "Modul":"Data Science & Machine Learning",
+        "ECTS":4,
+        "Modulgruppe":"Information Technology",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Web Scraping",
+        "ECTS":4,
+        "Modulgruppe":"Information Technology",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Blockchain & Distributed Ledger Technology",
+        "ECTS":4,
+        "Modulgruppe":"Information Technology",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
         "Modul":"Makerspace: IoT Use Case",
         "ECTS":4,
         "Modulgruppe":"Information Technology",
@@ -273,7 +336,21 @@
         "Note":""
     },
     {
+        "Modul":"SaaS Management",
+        "ECTS":4,
+        "Modulgruppe":"Digital Innovation",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
         "Modul":"Datenschutzrecht in der Schweiz und Europa",
+        "ECTS":4,
+        "Modulgruppe":"Digital Innovation",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Strategic Foresight",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
@@ -287,7 +364,28 @@
         "Note":""
     },
     {
+        "Modul":"LSA-Junior Swiss Agency Award ",
+        "ECTS":4,
+        "Modulgruppe":"Digital Innovation",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Product Management for Digital Business",
+        "ECTS":4,
+        "Modulgruppe":"Digital Innovation",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
         "Modul":"Information and Data Management",
+        "ECTS":4,
+        "Modulgruppe":"Digital Innovation",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Agile Leadership and Change",
         "ECTS":4,
         "Modulgruppe":"Digital Innovation",
         "Absolviert":false,
@@ -329,7 +427,7 @@
         "Note":""
     },
     {
-        "Modul":"VWL-Mikro\u00f6konomie",
+        "Modul":"VWL-Mikroökonomie",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
@@ -344,6 +442,20 @@
     },
     {
         "Modul":"HCE - Human Centric Entrepreneurship 2",
+        "ECTS":4,
+        "Modulgruppe":"Sozial- und Methodenkompetenz",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Doing and Designing Research",
+        "ECTS":4,
+        "Modulgruppe":"Sozial- und Methodenkompetenz",
+        "Absolviert":false,
+        "Note":""
+    },
+    {
+        "Modul":"Konfliktmanagement",
         "ECTS":4,
         "Modulgruppe":"Sozial- und Methodenkompetenz",
         "Absolviert":false,
