@@ -15,7 +15,7 @@ Ausserden soll ein Notenrechner integriert werden, welcher den aktuellen Notensc
 * Major: Für einen Major benötigt man mind. 20 ECTS in den Modulgruppen "User Experience", "Information Technology" und "Digital Innovation". In "Sozial- und Methodenkompetenz" kann man keinen Major machen.
 
 
-# Funktionalität: ECTS-Rechner
+# Funktionalität: ECTS-Rechner  
 Anhand der ausgewählten Module soll ausgerechnet werden, wie viel ECTS man im Studium gemacht (insgesamt und pro Modulgruppe).
 Dafür werden als Basis Daten aus zwei json Files benötigt:<br>
 * **module.json:** 
