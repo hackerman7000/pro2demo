@@ -2,7 +2,6 @@
 Mit dieser Seite soll für spezifisch für DBM-Student*innen eine Lösung geboten werden, um einen Überblick über den Fortschritt und die Leistung im Studium zu bekommen.
 Da das Studium durch Wahlpflichtmodule zu einem grossen Teil selbst gestaltet werden kann, geht die Übersicht über die erreichten ECTS Punkte schnell verloren. 
 Dieses Tool soll helfen, der studierenden Personen aufzuzeigen, wie viele Module in welchen Bereich noch zu absolvieren sind.
-Ausserden soll ein Notenrechner integriert werden, welcher den aktuellen Notenschnitt ausrechnen kann.
 
 **Relevante Informationen für den ECTS-Rechner:**<br>
 * Pflichtmodule: Müssen während dem Studium absolviert werden. 
@@ -17,11 +16,11 @@ Ausserden soll ein Notenrechner integriert werden, welcher den aktuellen Notensc
 
 # Funktionalität: ECTS-Rechner  
 Anhand der ausgewählten Module soll ausgerechnet werden, wie viel ECTS man im Studium gemacht (insgesamt und pro Modulgruppe).
-Dafür werden als Basis Daten aus zwei json Files benötigt:<br>
-* **module.json:** 
+Dafür werden als Basis Daten aus zwei json Files benötigt:<br><br>
+***module.json:*** 
 In module.json wird für jedes Modul ein Dictionary mit folgenden Werten erstellt: Modul (str), ECTS (int), Modulgruppe (str), Absolviert (bool) .
-<br>
-* **ects.json:** Hier werden die ECTS-Werte (int) hinterlegt für das Ausrechnen des Fortschritts.
+<br><br>
+***ects.json:*** Hier werden die ECTS-Werte (int) hinterlegt für das Ausrechnen des Fortschritts.
 
 <br> Die Module werden dann auf der Startseite in einer Liste mit Checkboxen angezeigt.
 Wird ein Modul ausgewähl werden dadurch im json die Daten angepasst und die Rechnungen vorgenommen.
@@ -73,6 +72,7 @@ Um das Tool noch nützlicher zu machen könnte man es beispielsweise folgenderma
 * Vorschläge zu Modulen, welche man aufgrunde der vorhandenen ECTS noch benötigt
 * Einzelne Module austragen können (Nicht alles zurücksetzen)
 * Module als Favorit markieren (z.B. für zukünftige Semester)
+* Neue/Spezielle Module manuell eintragen können
 * Visuelle Ausarbeitung: Beispielsweise werden erledigte Module Grün angezeigt
 * Seite "Module" mit zusätzlichen Informationen zu Modulen und Inhalten
 * Notenrechner
