@@ -41,7 +41,7 @@ Dadurch ist die Übersicht auch bei mehrmaliger Verwendung des Tools gewährleis
 
 
 ## Ablauf des Programms
-![Diagramm](./img/ablaufdiagram.svg)
+![Diagramm](./img/ablaufdiagram.jpg)
 
 ## Workflow
 ### 1. Dateneingabe: Auswahl der besuchten Module
