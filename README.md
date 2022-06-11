@@ -5,7 +5,7 @@
 2. [Funktionalität](#funktionalität-ects-rechner)
 3. [Ablauf](#ablauf-des-programms)
 4. [Workflow](#workflow)
-5. [Mögliche Erweiterungen](#mögliche-zuknftige-erweiterungen-des-programms)
+5. [Mögliche Erweiterungen](#mögliche-zukünftige-erweiterungen-des-programms)
 
 ## Problembeschreibung / Ausgangslage 
 Mit dieser Seite soll für spezifisch für DBM-Student*innen eine Lösung geboten werden, um einen Überblick über den Fortschritt und die Leistung im Studium zu bekommen.
