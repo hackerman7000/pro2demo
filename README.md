@@ -1,4 +1,13 @@
-# Problembeschreibung / Ausgangslage 
+# ECTS-Rechner
+
+## Inhalt README
+1. [Problembeschreibung](#problembeschreibung--ausgangslage)
+2. [Funktionalität](#funktionalitt-ects-rechner)
+3. [Ablauf](#ablauf-des-programms)
+4. [Workflow](#workflow)
+5. [Mögliche Erweiterungen](#mgliche-zuknftige-erweiterungen-des-programms)
+
+## Problembeschreibung / Ausgangslage 
 Mit dieser Seite soll für spezifisch für DBM-Student*innen eine Lösung geboten werden, um einen Überblick über den Fortschritt und die Leistung im Studium zu bekommen.
 Da das Studium durch Wahlpflichtmodule zu einem grossen Teil selbst gestaltet werden kann, geht die Übersicht über die erreichten ECTS Punkte schnell verloren. 
 Dieses Tool soll helfen, der studierenden Personen aufzuzeigen, wie viele Module in welchen Bereich noch zu absolvieren sind.
@@ -14,7 +23,7 @@ Dieses Tool soll helfen, der studierenden Personen aufzuzeigen, wie viele Module
 * Major: Für einen Major benötigt man mind. 20 ECTS in den Modulgruppen "User Experience", "Information Technology" und "Digital Innovation". In "Sozial- und Methodenkompetenz" kann man keinen Major machen.
 
 
-# Funktionalität: ECTS-Rechner  
+## Funktionalität: ECTS-Rechner  
 Anhand der ausgewählten Module soll ausgerechnet werden, wie viel ECTS man im Studium gemacht (insgesamt und pro Modulgruppe).
 Dafür werden als Basis Daten aus zwei json Files benötigt:<br><br>
 ***module.json:*** 
@@ -31,17 +40,17 @@ Dadurch ist die Übersicht auch bei mehrmaliger Verwendung des Tools gewährleis
 *Wie der Code genau funktioniert und welche Funktionen verwendet wurden ist in der main.py und den html Files als Kommentar zu lesen*
 
 
-# Ablauf des Programms
+## Ablauf des Programms
 ![Diagramm](./img/ablaufdiagram.svg)
 
-# Workflow
-## 1. Dateneingabe: Auswahl der besuchten Module
+## Workflow
+### 1. Dateneingabe: Auswahl der besuchten Module
 Auf der Startseite des Programms die besuchten Module auswählen. <br>
 Danach auf "Weiter" klicken. <br>
 Oder Alternativ mit dem Button "Zurücksetzen" alle Daten auf den Ausgangswert setzen. 
 
 
-## 2. Datenverarbeitung: Speichern der ausgewählten Module in json
+### 2. Datenverarbeitung: Speichern der ausgewählten Module in json
 (Die Datenverarbeitung erfolgt ohne Handlung des Users.)<br><br>
 **Wenn man bei der Startseite auf "Weiter" geklickt hat:**<br>
 Für jedes ausgewählte Modul wird im json der boolean Wert "Absolviert" von false auf true gesetzt.
@@ -53,20 +62,20 @@ Das bedeutet das alle Module auf nicht Absolviert ("Absolviert": False) gesetz w
 *Wie die Datenverarbeitung funktioniert wird im Punkt "Funktionalitäten" noch genauer erklärt.*
 
 
-## 3. Datenausgabe: Berechneter Studiumsfortschritt
+### 3. Datenausgabe: Berechneter Studiumsfortschritt
 Auf der Seite "ECTS" sieht man den berechneten Fortschritt des Studiums. Insgesamt und pro Modulgruppe.
 Zusätzlich wird noch ein individueller Text angezeigt, je nachdem wie weit man ist.
 Bei den Modulgruppen wird zudem angezeigt, wie viel ECTS man minimum benötigt oder für den Major.
 <br>Auf dieser Seite kann man dann entweder weiter zur Auswertungs-Seite oder man kann mit dem Button "Weitere Module hinzufügen" zurück auf die Startseite.
 Zurück auf der Startseite sind dann die bereits gewählten Module unter der Auswahl aufgelistet.
 
-## 4. Datenausgabe 2: Plotly Diagramm
+### 4. Datenausgabe 2: Plotly Diagramm
 Auf der Seite "Auswertung" werden die Fortschritte in den Modulgruppen 
 "User Experience", "Information Technology", "Digital Innovation" visuell dargestellt.
 Zudem erkennt man, wie viel man für das Minimum und für den Major noch erledigen muss.
 
 
-# Mögliche zukünftige Erweiterungen des Programms
+## Mögliche zukünftige Erweiterungen des Programms
 Um das Tool noch nützlicher zu machen könnte man es beispielsweise folgendermassen erweitern:
 * Möglichkeit, Module nach Modulgruppe zu Filtern
 * Vorschläge zu Modulen, welche man aufgrunde der vorhandenen ECTS noch benötigt
